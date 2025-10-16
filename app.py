@@ -14,7 +14,7 @@ def predict():
     sex = 1 if request.form['sex'] == 'female' else 0
     fare = float(request.form['fare'])
     prediction = model.predict([[sex,fare]])[0]
-    result = "Survived" if prediction == 1 else 'Did not survive'
+    result = "Survived" if prediction == 1 else 'Did not survive' 
     return render_template('index.html',prediction = result)
 
 
